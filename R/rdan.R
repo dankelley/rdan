@@ -13,7 +13,7 @@ whichRDA <- function() {
 
 #' Possibly print a debugging message
 #'
-#' Print a debugging message, if [debugLevel()] returns TRUE,
+#' Print a debugging message, if [debugStatus()] returns TRUE,
 #' i.e. if [debugOn()] has been called, without a subsequent
 #' call to [debugOff()].
 #'

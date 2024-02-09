@@ -7,7 +7,7 @@
 #'
 #' @template rdaTemplate
 #'
-#' @return a list containing `name`, `value`, `description` and
+#' @return [retrieveRDA] returns a list containing `name`, `value`, `description` and
 #' `context`, as set by the previous call to [storeRDA()].
 #'
 #' @export

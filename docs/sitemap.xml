@@ -19,6 +19,15 @@
     <loc>/news/index.html</loc>
   </url>
   <url>
+    <loc>/reference/debugOff.html</loc>
+  </url>
+  <url>
+    <loc>/reference/debugOn.html</loc>
+  </url>
+  <url>
+    <loc>/reference/debugStatus.html</loc>
+  </url>
+  <url>
     <loc>/reference/dmsg.html</loc>
   </url>
   <url>

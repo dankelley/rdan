@@ -10,7 +10,7 @@ dmsg(...)
 \item{...}{passed to \code{\link[=cat]{cat()}}, which prints the message.}
 }
 \description{
-Print a debugging message, if \code{\link[=debugLevel]{debugLevel()}} returns TRUE,
+Print a debugging message, if \code{\link[=debugStatus]{debugStatus()}} returns TRUE,
 i.e. if \code{\link[=debugOn]{debugOn()}} has been called, without a subsequent
 call to \code{\link[=debugOff]{debugOff()}}.
 }
