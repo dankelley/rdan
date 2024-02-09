@@ -7,14 +7,12 @@
 #'
 #' @template rdaTemplate
 #'
-#' @template debugTemplate
-#'
 #' @export
 #'
 #' @author Dan Kelley
-useRDA <- function(rda = "rdan.rda", debug = 0) {
+useRDA <- function(rda = "rdan.rda") {
     if (!file.exists(rda)) {
-        dmsg(debug, "creating RDA file \"", rda, "\"")
+        dmsg("creating RDA file \"", rda, "\"")
         results <- list() # stores name, value, comment and context
         save(results, file = rda)
     }

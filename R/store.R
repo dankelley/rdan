@@ -42,8 +42,10 @@ storeRDA <- function(name = NULL, value = NULL, comment = "", context = "", rda 
     # Alter 'context' to be more informative
     if (0 == nchar(context)) {
         context <- getwd()
+        dmsg("set context to \"", context, "\"\n")
     } else if (identical("/", substr(context, 1, 1))) {
         context <- paste0(getwd(), context)
+        dmsg("set context to \"", context, "\"\n")
     }
     load(rda) # defines 'results'
     results[[name]] <- list(value = value, comment = comment, context = context)

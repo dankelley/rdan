@@ -4,17 +4,12 @@
 \alias{useRDA}
 \title{Designate an RDA File for Notekeeping}
 \usage{
-useRDA(rda = "rdan.rda", debug = 0)
+useRDA(rda = "rdan.rda")
 }
 \arguments{
 \item{rda}{character value indicating the name of the RDA file in
 which to save the notes. The default is the value returned by
 \code{\link[=whichRDA]{whichRDA()}}, as set by a previous call to \code{\link[=useRDA]{useRDA()}}.}
-
-\item{debug}{an integer specifying whether debugging information is
-to be printed during the processing. If this is 0, then the function
-works silently, except for warnings or errors.  If this is 1 or
-higher, some information may be printed during processing.}
 }
 \description{
 This creates the RDA file if it does not exist yet. It also
