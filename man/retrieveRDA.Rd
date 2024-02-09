@@ -13,6 +13,10 @@ retrieveRDA(name = NULL, rda = whichRDA())
 which to save the notes. The default is the value returned by
 \code{\link[=whichRDA]{whichRDA()}}, as set by a previous call to \code{\link[=useRDA]{useRDA()}}.}
 }
+\value{
+a list containing \code{name}, \code{value}, \code{description} and
+\code{context}, as set by the previous call to \code{\link[=storeRDA]{storeRDA()}}.
+}
 \description{
 This returns a list with items named \code{value},
 \code{description}, and \code{context}, as set by \code{\link[=storeRDA]{storeRDA()}}.

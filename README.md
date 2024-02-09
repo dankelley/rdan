@@ -23,7 +23,9 @@ devtools::install_github("dankelley/rdan")
 
 ## Example
 
-Here is how we might store a number for use later.
+This shows how to store a number (with a name that is not valid for R)
+and something quite a lot more fun – 60 years since this package was
+created!
 
 ``` r
 library(rdan)
@@ -38,6 +40,16 @@ retrieveRDA("2pi")
 #> 
 #> $context
 #> [1] "/Users/kelley/git/rdan"
-file.remove("sample.rda") # we don't need to store this!
+storeRDA("beatles on Ed Sullivan Show", as.Date("1964-02-09"), "Beatlemania starts")
+retrieveRDA("beatles on Ed Sullivan Show")
+#> $value
+#> [1] "1964-02-09"
+#> 
+#> $comment
+#> [1] "Beatlemania starts"
+#> 
+#> $context
+#> [1] "/Users/kelley/git/rdan"
+file.remove("sample.rda") # clean up
 #> [1] TRUE
 ```

@@ -33,12 +33,15 @@ devtools::install_github("dankelley/rdan")
 
 ## Example
 
-Here is how we might store a number for use later.
+This shows how to store a number (with a name that is not valid for R) and
+something quite a lot more fun -- 60 years since this package was created!
 
 ```{r example}
 library(rdan)
 useRDA("sample.rda")
 storeRDA("2pi", 2 * pi, "circle perimeter divided by radius")
 retrieveRDA("2pi")
-file.remove("sample.rda") # we don't need to store this!
+storeRDA("beatles on Ed Sullivan Show", as.Date("1964-02-09"), "Beatlemania starts")
+retrieveRDA("beatles on Ed Sullivan Show")
+file.remove("sample.rda") # clean up
 ```

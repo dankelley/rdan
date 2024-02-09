@@ -1,6 +1,6 @@
 Package: rdan
 Title: RDA-based Notebooks
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person("Dan", "Kelley", , "kelley.dan@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "https://orcid.org/0000-0001-7808-5911"))

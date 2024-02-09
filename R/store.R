@@ -1,7 +1,8 @@
 #' Store a Value Into an RDA file
 #'
-#' This stores a value, its description, and its context within
-#' an RDA notebook file.
+#' This stores or updates a value, its description, and its context within
+#' an RDA notebook file. Note that this will overwrite the results
+#' of any previous calls that defined this item.
 #'
 #' @param name character value indicating the name of the quantity
 #' to be stored. Note that this does not need to be a valid R
@@ -21,11 +22,13 @@
 #'
 #' @template rdaTemplate
 #'
-#' @example
+#' @examples
 #' library(rdan)
 #' useRDA("sample.rda")
 #' storeRDA("2pi", 2 * pi, "circle perimeter divided by radius")
 #' retrieveRDA("2pi")
+#' storeRDA("beatles on Ed Sullivan Show", as.Date("1964-02-09"), "Beatlemania starts")
+#' retrieveRDA("beatles on Ed Sullivan Show")
 #' file.remove("sample.rda") # we don't need to store this!
 #'
 #' @export
