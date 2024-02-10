@@ -15,7 +15,7 @@
 #' @author Dan Kelley
 retrieveRDA <- function(name = NULL, rda = whichRDA()) {
     if (!file.exists(rda)) {
-        stop("RDA file \"", rda, "\" does not exist yet; use createRDA() to create it")
+        stop("RDA file \"", rda, "\" does not exist yet; call useRDA() first")
     }
     get(load(rda))[[name]]
 }

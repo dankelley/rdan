@@ -6,6 +6,11 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/dankelley/rdan/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dankelley/rdan/actions/workflows/R-CMD-check.yaml)
+[![Project Status: WIP – Initial development is in progress, but there
+has not yet been a stable, usable release suitable for the
+public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![GitHub last
+commit](https://img.shields.io/github/last-commit/dankelley/rdan)](https://img.shields.io/github/last-commit/dankelley/rdan)
 <!-- badges: end -->
 
 The goal of rdan is to provide a simple scheme for saving results into

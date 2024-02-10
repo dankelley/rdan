@@ -37,7 +37,7 @@
 storeRDA <- function(name = NULL, value = NULL, comment = "", context = "", rda = whichRDA()) {
     #message("rda='", rda, "'")
     if (!file.exists(rda)) {
-        stop("RDA file \"", rda, "\" does not exist yet; use createRDA() to create it")
+        stop("RDA file \"", rda, "\" does not exist yet; call useRDA() first")
     }
     # Alter 'context' to be more informative
     if (0 == nchar(context)) {
