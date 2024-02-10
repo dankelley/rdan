@@ -11,7 +11,7 @@ whichRDA <- function() {
     if ("rda" %in% names(rdanEnv)) rdanEnv$rda else "RDAN.rda"
 }
 
-#' Possibly print a debugging message
+#' Possibly Print a Debugging Message
 #'
 #' Print a debugging message, if [debugStatus()] returns TRUE,
 #' i.e. if [debugOn()] has been called, without a subsequent

@@ -5,6 +5,8 @@ Authors@R:
     person("Dan", "Kelley", , "kelley.dan@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "https://orcid.org/0000-0001-7808-5911"))
 Description: Uses RDA files to store notebooks as key-value(s) pairs.
+Depends: R (>= 4.1.0)
+Suggests: testthat (>= 3.0.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

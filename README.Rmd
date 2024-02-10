@@ -36,14 +36,20 @@ devtools::install_github("dankelley/rdan")
 ## Example
 
 This shows how to store a number (with a name that is not valid for R) and
-something quite a lot more fun -- 60 years since this package was created!
+something quite a lot more fun -- 60 years before this package was created!
 
 ```{r example}
 library(rdan)
+# State name of RDA-notebook file (will be created if missing)
 useRDA("sample.rda")
+# Save a simple number
 storeRDA("2pi", 2 * pi, "circle perimeter divided by radius")
 retrieveRDA("2pi")
-storeRDA("beatles on Ed Sullivan Show", as.Date("1964-02-09"), "Beatlemania starts")
-retrieveRDA("beatles on Ed Sullivan Show")
-file.remove("sample.rda") # clean up
+# Save a date
+storeRDA("Beatlemania", as.Date("1964-02-09"), "Beatles perform on Ed Sullivan Show")
+retrieveRDA("Beatlemania")
+# Find names of all entries
+listRDA()
+# Remove notebook
+file.remove("sample.rda")
 ```

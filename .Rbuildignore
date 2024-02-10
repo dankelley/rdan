@@ -6,3 +6,5 @@ man-roxygen
 ^README\.Rmd$
 ^docs$
 ^.*\.rda$
+^tests/testthat/.lintr$
+^R/.lintr$

@@ -2,7 +2,7 @@
 % Please edit documentation in R/rdan.R
 \name{dmsg}
 \alias{dmsg}
-\title{Possibly print a debugging message}
+\title{Possibly Print a Debugging Message}
 \usage{
 dmsg(...)
 }

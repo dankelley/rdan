@@ -29,12 +29,14 @@ devtools::install_github("dankelley/rdan")
 ## Example
 
 This shows how to store a number (with a name that is not valid for R)
-and something quite a lot more fun – 60 years since this package was
+and something quite a lot more fun – 60 years before this package was
 created!
 
 ``` r
 library(rdan)
+# State name of RDA-notebook file (will be created if missing)
 useRDA("sample.rda")
+# Save a simple number
 storeRDA("2pi", 2 * pi, "circle perimeter divided by radius")
 retrieveRDA("2pi")
 #> $value
@@ -45,16 +47,21 @@ retrieveRDA("2pi")
 #> 
 #> $context
 #> [1] "/Users/kelley/git/rdan"
-storeRDA("beatles on Ed Sullivan Show", as.Date("1964-02-09"), "Beatlemania starts")
-retrieveRDA("beatles on Ed Sullivan Show")
+# Save a date
+storeRDA("Beatlemania", as.Date("1964-02-09"), "Beatles perform on Ed Sullivan Show")
+retrieveRDA("Beatlemania")
 #> $value
 #> [1] "1964-02-09"
 #> 
 #> $comment
-#> [1] "Beatlemania starts"
+#> [1] "Beatles perform on Ed Sullivan Show"
 #> 
 #> $context
 #> [1] "/Users/kelley/git/rdan"
-file.remove("sample.rda") # clean up
+# Find names of all entries
+listRDA()
+#> [1] "2pi"         "Beatlemania"
+# Remove notebook
+file.remove("sample.rda")
 #> [1] TRUE
 ```

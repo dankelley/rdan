@@ -75,10 +75,12 @@
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>This shows how to store a number (with a name that is not valid for R) and something quite a lot more fun – 60 years since this package was created!</p>
+<p>This shows how to store a number (with a name that is not valid for R) and something quite a lot more fun – 60 years before this package was created!</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">rdan</span><span class="op">)</span></span>
+<span><span class="co"># State name of RDA-notebook file (will be created if missing)</span></span>
 <span><span class="fu"><a href="reference/useRDA.html">useRDA</a></span><span class="op">(</span><span class="st">"sample.rda"</span><span class="op">)</span></span>
+<span><span class="co"># Save a simple number</span></span>
 <span><span class="fu"><a href="reference/storeRDA.html">storeRDA</a></span><span class="op">(</span><span class="st">"2pi"</span>, <span class="fl">2</span> <span class="op">*</span> <span class="va">pi</span>, <span class="st">"circle perimeter divided by radius"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/retrieveRDA.html">retrieveRDA</a></span><span class="op">(</span><span class="st">"2pi"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; $value</span></span>
@@ -89,17 +91,22 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $context</span></span>
 <span><span class="co">#&gt; [1] "/Users/kelley/git/rdan"</span></span>
-<span><span class="fu"><a href="reference/storeRDA.html">storeRDA</a></span><span class="op">(</span><span class="st">"beatles on Ed Sullivan Show"</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"1964-02-09"</span><span class="op">)</span>, <span class="st">"Beatlemania starts"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/retrieveRDA.html">retrieveRDA</a></span><span class="op">(</span><span class="st">"beatles on Ed Sullivan Show"</span><span class="op">)</span></span>
+<span><span class="co"># Save a date</span></span>
+<span><span class="fu"><a href="reference/storeRDA.html">storeRDA</a></span><span class="op">(</span><span class="st">"Beatlemania"</span>, <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"1964-02-09"</span><span class="op">)</span>, <span class="st">"Beatles perform on Ed Sullivan Show"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/retrieveRDA.html">retrieveRDA</a></span><span class="op">(</span><span class="st">"Beatlemania"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; $value</span></span>
 <span><span class="co">#&gt; [1] "1964-02-09"</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $comment</span></span>
-<span><span class="co">#&gt; [1] "Beatlemania starts"</span></span>
+<span><span class="co">#&gt; [1] "Beatles perform on Ed Sullivan Show"</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $context</span></span>
 <span><span class="co">#&gt; [1] "/Users/kelley/git/rdan"</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="st">"sample.rda"</span><span class="op">)</span> <span class="co"># clean up</span></span>
+<span><span class="co"># Find names of all entries</span></span>
+<span><span class="fu"><a href="reference/listRDA.html">listRDA</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "2pi"         "Beatlemania"</span></span>
+<span><span class="co"># Remove notebook</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="st">"sample.rda"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 </div>
 </div>
