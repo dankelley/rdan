@@ -10,11 +10,11 @@
 #' @export
 #'
 #' @author Dan Kelley
-useRDA <- function(rda = "rdan.rda") {
+useRDA <- function(rda = "notes.rda") {
     if (!file.exists(rda)) {
         dmsg("creating RDA file \"", rda, "\"")
-        results <- list() # stores name, value, comment and context
-        save(results, file = rda)
+        notes <- list() # stores name, value, comment and context
+        save(notes, file = rda)
     }
     rdanEnv[["rda"]] <- rda
 }

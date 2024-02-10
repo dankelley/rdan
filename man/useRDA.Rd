@@ -4,7 +4,7 @@
 \alias{useRDA}
 \title{Designate an RDA File for Notekeeping}
 \usage{
-useRDA(rda = "rdan.rda")
+useRDA(rda = "notes.rda")
 }
 \arguments{
 \item{rda}{character value indicating the name of the RDA file in

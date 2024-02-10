@@ -47,8 +47,8 @@ storeRDA <- function(name = NULL, value = NULL, comment = "", context = "", rda 
         context <- paste0(getwd(), context)
         dmsg("set context to \"", context, "\"\n")
     }
-    load(rda) # defines 'results'
-    results[[name]] <- list(value = value, comment = comment, context = context)
+    load(rda) # defines 'notes'
+    notes[[name]] <- list(value = value, comment = comment, context = context)
     #print(results)
-    save(results, file = rda)
+    save(notes, file = rda)
 }

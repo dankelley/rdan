@@ -30,9 +30,9 @@ removeRDA <- function(name = NULL, rda = whichRDA()) {
     if (!file.exists(rda)) {
         stop("RDA file \"", rda, "\" does not exist yet; call useRDA() first")
     }
-    load(rda) # defines 'results'
-    if (name %in% names(results)) {
-        results[[name]] <- NULL
-        save(results, file = rda)
+    load(rda) # defines 'notes'
+    if (name %in% names(notes)) {
+        notes[[name]] <- NULL
+        save(notes, file = rda)
     }
 }
